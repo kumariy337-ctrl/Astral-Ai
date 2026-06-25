@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#0F172A;
+    color:#F8FAFC;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    background:#1E293B;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+    color:#818CF8;
+}
+
+.sidebar button{
+    background:#334155;
+    border:none;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar button:hover{
+    background:#6366F1;
+    transform:translateY(-2px);
+}
+
+.logout{
+    margin-top:auto;
+}
+
+/* Main */
+
+.main{
+    flex:1;
+    padding:25px;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.navbar input{
+    width:60%;
+    padding:12px 15px;
+    border:none;
+    border-radius:12px;
+    background:#1E293B;
+    color:white;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #6366F1;
+    box-shadow:0 0 15px rgba(99,102,241,.5);
+}
+
+.profile-info h4{
+    margin-bottom:3px;
+}
+
+.profile-info p{
+    font-size:12px;
+    color:#CBD5E1;
+}
+
+/* Card */
+
+.card{
+    background:#1E293B;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+textarea{
+    width:100%;
+    height:250px;
+    background:#334155;
+    color:white;
+    border:none;
+    border-radius:15px;
+    padding:15px;
+    resize:none;
+    margin-bottom:20px;
+}
+
+.upload-section,
+.action-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.upload-section button,
+.action-buttons button{
+    background:#6366F1;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-section button:hover,
+.action-buttons button:hover{
+    background:#818CF8;
+    transform:translateY(-2px);
+}
+.logo{
+    background: linear-gradient(
+        90deg,
+        #7DD3FC,
+        #38BDF8,
+        #0EA5E9
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 700;
+}

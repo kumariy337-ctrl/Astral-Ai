@@ -1,0 +1,18 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    color: brown;
+}
+h3{
+    color: brown;
+}
+#login {
+    color: beige;
+    background-color: brown;
+}
+#signup {
+    color: brown;
+    background-color: beige;
+
+}

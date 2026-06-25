@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style3.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creator Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>✨ Creator</h2>
+
+            <button>➕ New</button>
+            <button>🕒 History</button>
+            <button>🌙 Dark Mode</button>
+            <button>&#128161; Projects</button>
+        
+            
+        
+            <button>&#128204;Goals </button>
+            <button>More...</button>
+
+            <div class="logout">
+                <button>🚪 Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Section -->
+        <main class="main">
+
+            <!-- Navbar -->
+            <div class="navbar">
+                <input type="text" placeholder="🔍 Search content...">
+
+                <div class="profile">
+                    <!-- Replace with your image -->
+                    <img src="images/myphoto.jpg" alt="Profile">
+
+                    <div class="profile-info">
+                        <h4>Yami</h4>
+                        <p>Content Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor Card -->
+            <div class="card">
+                <h2>Create Content</h2>
+
+                <textarea placeholder="Start writing your content here..."></textarea>
+
+                <div class="upload-section">
+                    <button>📷 Add Photo</button>
+                    <button>📄 Add PDF</button>
+                    
+                </div>
+
+                <div class="action-buttons">
+                    <button>🔗 Share Link</button>
+                    <button>📋 Copy</button>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+    <section class="chart-section">
+        <div class="chart-card">
+            <h3>Weekly AI Activity</h3>
+            <p>Content generated in the last 7 days</p>
+    
+            <canvas id="activityChart"></canvas>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    import React, { useState } from "react";
+import "./SearchBar.css";
+
+const SearchBar = () => {
+  const [message, setMessage] = useState("");
+
+  const handleSend = () => {
+    if (!message.trim()) return;
+
+    console.log("User Message:", message);
+    setMessage("");
+  };
+
+  return (
+    <div className="search-container">
+      <textarea
+        className="search-input"
+        placeholder="Ask anything..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        rows={1}
+      />
+
+      <button className="send-btn" onClick={handleSend}>
+        ➜
+      </button>
+    </div>
+  );
+};
+
+export default SearchBar;
+
+</body>
+</html>
